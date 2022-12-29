@@ -1,0 +1,20 @@
+public class Main{
+    public static int stock(int arr[],int n){
+        int buy = arr[0];
+        int max_profit = 0;
+        for(int i=1;i<n;i++){
+            if(arr[i] < buy)//
+                buy = arr[i];
+            
+            else if(arr[i] - buy > max_profit)
+                max_profit = arr[i]-buy;
+        }
+        return max_profit;
+    }
+    public static void main(String[] args){
+        int arr[] = {7,1,5,6,4};
+        int n = arr.length;
+        int max_profit = stock(arr,n);
+        System.out.print(max_profit);
+    }
+}

@@ -1,0 +1,42 @@
+
+1)USING HASHSET:_
+
+public class Main{
+    public static void remove(int arr[]){
+        int n = arr.length;
+        HashSet<Integer> set = new HashSet<>();
+        for(int i=0;i<n;i++)
+            set.add(arr[i]);
+            System.out.print(set);
+        
+    }
+    public static void main(String[] args){
+        int arr[] = {1,1,2,2,2,2,2};
+        int n = arr.length;
+        remove(arr);
+        
+    }
+}
+
+
+2)USING HASHMAP:-
+
+
+public class Main{
+    public static void remove(int arr[]){
+        int n = arr.length;
+        HashMap<Integer,Boolean> map = new HashMap<>();
+        for(int i=0;i<n;i++){
+            if(map.get(arr[i]) == null){
+                System.out.print(arr[i]+" ");
+                map.put(arr[i],true);
+            }
+        }
+    }
+    public static void main(String[] args){
+        int arr[] = {1,1,2,2,2,2,2};
+        int n = arr.length;
+        remove(arr);
+        
+    }
+}
